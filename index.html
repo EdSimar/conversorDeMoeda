@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Conversor de Moedas</h1>
+        </header>
+        <section>
+            <div id="container-real">
+                <label for="valReal">R$</label>
+                <input  type="number" name="real" id="valReal" value="" tabindex="1" step="0.01" min="0.01" max="999999999,99" onclick="ableBtnConvert()" onchange="ableBtnConvert()" autofocus required/>
+            </div>
+            <div id="coins">
+                <div class="space">
+                    <input type="radio" name="valEstrang" id="valDolar" value="Dólar" tabindex="2" />
+                    <label for="valDolar">Dólar</label>
+                </div>
+                <div class="space">
+                    <input type="radio" name="valEstrang" id="valEuro" value="Euro" tabindex="3" />
+                    <label for="valEuro">Euro</label>
+                </div>
+                <div class="space">
+                    <input type="radio" name="valEstrang" id="valLibra" value="Libra" tabindex="4" />
+                    <label for="valLibra">Libra</label>
+                </div>
+                <div class="space">
+                    <input type="radio" name="valEstrang" id="valBitcoins" value="Bitcoins" tabindex="5" />
+                    <label for="valBitcoins">Bitcoins</label>
+                </div>
+            </div>
+                <div id="butt">
+                    <button id="butConvert"  class="space" onclick= "disabledBtnConvert(); ableBtnConvert()" disabled>Converter</button>
+                    <button type="reset" id="butClean" class="space">Limpar</button>
+                </div>
+        </section>
+        <section>
+            <p id="result">Digite o valor e selecione a moeda que deseja converter</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
